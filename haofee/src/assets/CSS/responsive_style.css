@@ -1,0 +1,370 @@
+.title-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mobile-title {
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #2e2e2e;
+}
+
+/*移动端返回按钮*/
+.return-img{
+    float: left;
+    padding: 1px;
+    height: 18px;
+}
+
+/*移动端各模块的白色背景块*/
+.mb-card{
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*移动端最下面的div。留出下边距，防止内容被下导航栏遮住*/
+.last-box{
+    margin-bottom: 60px;
+}
+
+.m-over_state {
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding:2px 4px 2px;
+    font-size: small;
+    color: #AAAAAA;
+}
+
+.m-ing_state {
+    border: 1px solid #F0C27B;
+    border-radius: 5px;
+    padding:2px 4px 2px;
+    font-size: small;
+    color: #F0C27B;
+}
+
+/*移动端面包屑导航栏*/
+.m-breadcrumb{
+    color: #7F7F7F;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.m-breadcrumb a{
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+.m-breadcrumb a:hover{
+    color: rgb(234, 176, 85);
+}
+
+.m-breadcrumb a:active{
+    color: rgb(234, 176, 85);
+}
+
+/*PC端各模块的白色背景块*/
+.pc-card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.my-card{
+    background: #FFFFFF;
+    border-radius: 18px;
+}
+
+.my-card-pd{
+    padding: 30px;
+}
+
+/*面包屑导航栏*/
+.my-breadcrumb{
+    color: #7F7F7F;
+    font-size: 18px;
+}
+
+.my-breadcrumb a{
+    color: #555555;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.my-breadcrumb span{
+    font-size: 20px;
+    margin-left: 5px;
+    color: rgb(85, 85, 85)
+}
+
+.my-breadcrumb a:hover{
+    color: rgb(234, 176, 85);
+    text-decoration: none;
+}
+
+.my-breadcrumb a:active{
+    color: rgb(234, 176, 85);
+    text-decoration: none;
+}
+
+/*导航栏*/
+.my-nav-bar {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    position: relative;
+    z-index: 1;
+}
+
+.my-nav {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.my-nav li {
+    float: left;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    list-style-type: none;
+    /*cursor: pointer*/
+}
+
+.my-nav li a {
+    text-decoration: none;
+    padding-bottom: 4px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.my-navleft-option li a:hover {
+    border-bottom: solid 2px #fff;
+}
+
+
+.my-nav li a.navcurr {
+    border-bottom: solid 2px #fff;
+}
+
+/*导航栏悬浮*/
+.nav-pos {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+
+/*图片与文字垂直居中*/
+.center-vertically{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+}
+
+/*图片与文字右间隔距离*/
+.my-icon{
+    margin-right: 5px;
+}
+
+/*居左*/
+.left{
+    text-align: left;
+}
+
+/*居右*/
+.right{
+    text-align: right;
+}
+
+/*居中*/
+.center{
+    text-align: center;
+}
+
+/*鼠标悬浮变成手*/
+.hand{
+    cursor: pointer;
+}
+
+.cur-de{
+    cursor: default;
+}
+
+/*导航栏背景*/
+.nav-bg{
+    background-image: linear-gradient(90deg, rgba(222, 176, 108, 1) 0%, rgba(247, 197, 120, 1) 92%);
+}
+
+/*大标题*/
+.box-title {
+    font-size: 27px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+/*个人中心大标题*/
+.personal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.personal-title-a{
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #333333;
+}
+
+.mb-2{
+    margin-bottom: 2px;
+}
+
+.mb-5{
+    margin-bottom: 5px;
+}
+
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+/*个人中心共用类开始*/
+.activity-box {
+    border-radius: 18px;
+    border: solid rgba(215, 215, 215, 1) 1px;
+    padding: 18px 25px 18px;
+    margin-bottom: 20px;
+}
+
+.over_state {
+    border: 1px solid #AAAAAA;
+    border-radius: 5px;
+    padding:3px 9px 3px;
+    font-size: small;
+    color: #AAAAAA;
+}
+
+.ing_state {
+    border: 1px solid #F0C27B;
+    border-radius: 5px;
+    padding:3px 9px 3px;
+    font-size: small;
+    color: #F0C27B;
+}
+
+.gray-text{
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+.mobile-gray-text{
+    color: #7F7F7F;
+    font-size: 14px;
+}
+
+/*改elemnt样式，用>>>的写法在全局css中无效，要在每个组件中分别改。以下的写法可以*/
+/*修改按钮样式*/
+.yellow-btn .el-button{
+    color: #FFFFFF;
+    background-color: #F7C578;
+    border:none;
+    min-height:10px;
+    padding: 7px 20px;
+}
+
+.yellow-btn .el-button:hover{
+    background-color: rgb(227,181,112);
+    border:none;
+}
+
+/*修改按钮样式*/
+.mobile-yellow-btn .el-button{
+    color: #FFFFFF;
+    background-color: #F7C578;
+    border:none;
+    min-height:10px;
+    padding: 4px 15px;
+}
+
+.mobile-yellow-btn .el-button:hover{
+    background-color: rgb(227,181,112);
+    border:none;
+}
+
+/*单选框覆盖原有阴影*/
+.filter-radio .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    box-shadow: none;
+}
+
+/*分割线*/
+.line .el-divider--horizontal{
+    margin-top: 0;
+    margin-bottom: 10px;
+    background: rgb(242,242,242);
+}
+/*个人中心共用类结束*/
+
+/*超链接不加横线*/
+a {
+    text-decoration: none;
+}
+
+/*pc端导航栏部分类开始*/
+.popover-link{
+    display: block;
+    line-height: 35px;
+    color: #555555;
+}
+
+.popover-link:hover{
+    color: #F0C27B;
+}
+
+.expect{
+    display: block;
+    line-height: 35px;
+    color: #b7b7b7;
+    cursor: default;
+}
+
+/*修改element分隔线样式*/
+.my-line .el-divider--horizontal{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+/*pc端导航栏部分类结束*/
+
+/*需要用v-html显示的文本的css*/
+.alert-text span{
+    color: #F6A030;
+}
+
+.alert-text a{
+    color: #F6A030;
+}
+
+
+.alert-text a:hover{
+    color: rgb(234, 176, 85);
+}
+
+.container {
+    margin-bottom: 40px;
+}

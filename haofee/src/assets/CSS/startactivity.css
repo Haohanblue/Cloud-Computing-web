@@ -1,0 +1,311 @@
+﻿@charset "utf-8";
+body {
+    background: #F5F8FA
+}
+
+.stty_part, .stty_crt_part {
+    margin: 10px;
+    border-radius: 6px;
+    padding: 15px;
+    background: #fff;
+}
+
+.stty_t {
+    font-size: 20px;
+    color: #222;
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+.stty_i {
+    position: relative;
+    padding-left: 50px;
+    z-index: 1;
+    padding: 10px 0 10px 50px;
+}
+
+.stty_il {
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+.stty_i2 {
+    padding-left: 80px;
+}
+
+.stty_ipt {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 99%;
+}
+
+.stty_ih {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px 0
+}
+
+/*.stty_ix {*/
+    /*padding-bottom: 10px*/
+/*}*/
+
+#st_des, #st_verifyd {
+    background: #F5F5F5;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 20px;
+    display: block;
+    height: 120px;
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.stty_ct {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+
+.stty_ct strong {
+    font-size: 20px;
+    color: #222;
+    font-weight: 700;
+}
+
+.stty_note {
+    color: #D0D0D0;
+    padding-left: 15px;
+}
+
+.stty_addbtn {
+    background: #FD6067;
+    color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 22px;
+    line-height: 19px;
+    width: 22px;
+    text-align: center;
+    font-size: 25px;
+    /*position: absolute;*/
+    /*top: 5px;*/
+    /*right: 4px;*/
+}
+
+.stty_y_box {
+}
+
+.stty_y_i {
+    padding-right: 45px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+
+.st_yname {
+    background: #F5F5F5;
+    padding: 10px 0 10px 4%;
+    width: 96%;
+    border: none;
+    outline: none;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: block;
+    box-sizing: content-box;
+}
+
+.stty_y_act {
+    height: 60px;
+    padding-top: 30px;
+    box-sizing: content-box;
+}
+
+a.create_stty_btn, button.create_stty_btn {
+    background: transparent;
+    /*color: #fff;*/
+    color: #666;
+    text-align: center;
+    font-size: 17px;
+    width: 80%;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    box-sizing: content-box;
+    padding: 8px 0;
+    /*box-shadow: 0px 7px 7px 1px #fee4e6;*/
+    box-shadow: 0px 7px 7px 1px #f9f9f9;
+    border: solid 1px #eee;
+    border-radius: 51px;
+}
+
+a.create_stty_btn:hover, button.create_stty_btn:hover {
+    /*text-decoration: none;*/
+    /*background: #ff3b44;*/
+    border: solid 1px #F9474F;
+    color: #F9474F;
+
+}
+
+.bootstrap-tagsinput {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.del_stty_btn {
+    background: #FD6067;
+    color: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 22px;
+    line-height: 19px;
+    width: 22px;
+    text-align: center;
+    font-size: 28px;
+    position: absolute;
+    top: 13px;
+    overflow: hidden;
+    right: 4px;
+}
+
+.bootstrap-tagsinput input {
+    width: 100%;
+    padding: 0;
+}
+
+.spanheight {
+    height: 95px
+}
+
+.tooltips {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltips .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    left: 120%;
+    background-color: rgba(102, 102, 102, 0.8);
+    color: white;
+    font-weight: normal;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 9999;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.tooltips:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltips .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 20%;
+    right: 100%; /* 提示工具左侧 */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(102, 102, 102, 0.8) transparent transparent;
+}
+
+.head-hint-p {
+    color: #666666;
+    display: inline-block;
+    font-size: 12px;
+    font-weight:normal;
+}
+
+#question {
+    height: 12px;
+    width: 12px
+}
+
+.st_error {
+    border: 3px solid #fb5a61!important;
+    border-radius: 10px;
+}
+
+.st_error_text {
+    color: #fb5a61;
+}
+
+.recommend_cats {
+    margin: 10px 0 0;
+}
+
+.recommend_cat_list {
+
+}
+
+.cat {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    position: relative;
+    color: #ea6f5a;
+    border: 1px solid #ea6f5a;
+    border-radius: 10px;
+}
+
+a.cat:hover {
+    display: inline-block;
+    padding: 2px 10px;
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    position: relative;
+    background: #ea6f5a;
+    color: white;
+    border: 1px solid #ea6f5a;
+    border-radius: 10px;    
+}
+
+.verify-material-old {
+    padding-bottom: 20px;
+}
+
+.add-verify-material {
+    text-align: right;
+}
+
+.add-verify-material-a{
+    border: solid 1px #FF9900;
+    border-radius: 14px;
+    padding: 2px 9px;
+    color: #FF9900;
+    font-size: 12px;
+    display: inline-block;
+    /*float: right;*/
+}
+
+.add-verify-material-a a{
+    color: #FF9900;
+    font-size: 12px;
+}
+
+.notfinished {
+    color: #999999;
+    border: solid 1px #999999;
+}

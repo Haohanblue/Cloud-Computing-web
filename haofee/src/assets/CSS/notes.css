@@ -1,0 +1,247 @@
+@charset "utf-8";
+.note_part {
+    background: #fff;
+    padding: 20px 0px;
+    border-radius: 7px;
+}
+
+.note_item {
+    padding: 10px 0 0;
+    display: flex;
+}
+
+.note_avatar_box {
+    border-radius: 50%;
+}
+
+.note_avatar_box img {
+    height: 20px;
+}
+
+.content_box {
+    /*margin-left: 10%;*/
+    width: 100%;
+    flex-direction: column;
+    padding: 0 10px 0;
+}
+
+.note_username {
+    color: #4367b4;
+    padding: 0 0 10px;
+}
+
+.note_text {
+    padding: 10px 0 0;
+}
+
+.note_text .note_txt {
+    font-size: 15px;
+}
+
+.note_bar {
+    padding: 10px 0 30px;
+    border-bottom: solid 1px #e4e4e4;
+}
+
+.note_bar .note_time {
+    color: #858585;
+    font-size: 12px;
+    display: flex;
+    float: left;
+}
+
+.note_like, .note_like_on {
+    float: right;
+}
+
+.note_like .like_logo {
+    display: inline-block;
+    /*text-align: right;*/
+    background: url(../images/like.png) center 3px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -webkit-background-size: auto 80%;
+    -o-background-size: auto 80%;
+    width: 15px;
+    height: 16px;
+}
+
+.note_like_on .like_logo {
+    display: inline-block;
+    /*text-align: right;*/
+    background: url(../images/like_on.png) center 3px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -webkit-background-size: auto 80%;
+    -o-background-size: auto 80%;
+    width: 15px;
+    height: 16px;
+}
+
+.note_has_nomore {
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#note_bg {
+    filter: alpha(opacity=50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    /*overflow-y: auto;*/
+}
+
+#show_note {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    height: 45%;
+    z-index: 9991;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#note_list {
+    /*position: relative;*/
+    height: 100%;
+    padding: 0 10px;
+    overflow-y: auto;
+}
+
+#report_note_list {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.note_t {
+    font-size: 10px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.note_img .span_note_img {
+    display: inline-block;
+    text-align: right;
+    background: url(../images/note.png) center 3px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%;
+    width: 25px;
+    height: 25px;
+}
+
+.report_nav {
+    background: #f8fafc;
+    display: inline-block;
+    width: 100%;
+}
+
+.report_nav_ls {
+    padding: 8px 10px 1px 10px;
+}
+
+.report_nav_ls ul {
+    width: 100%;
+    background: #fff;
+    /*padding: 5px 0px;*/
+    border-radius: 8px;
+}
+
+.report_nav_ls ul li {
+    width: 25%;
+    text-align: center;
+    float: left;
+}
+
+.report_nav_ls a {
+    color: #777;
+    height: 20px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    /*border-radius: 5px;*/
+    padding-bottom: 5px;
+}
+
+.report_nav_ls li a.crowd_stats {
+    background: url(../images/crowd_stats.png) center 10px no-repeat;
+    background-size: auto 50%;
+    border-radius: 0 0 0 5px;
+}
+
+.report_nav_ls li a.links {
+    background: url(../images/links.png) center 10px no-repeat;
+    background-size: auto 50%;
+    border-radius: 0;
+}
+
+.report_nav_ls li a.machine_stats {
+    background: url(../images/machine_stats.png) center 10px no-repeat;
+    background-size: auto 50%;
+    border-radius: 0 0 5px 0;
+}
+
+.report_nav_ls li a.my_stats {
+    background: url(../images/my_stats.png) center 10px no-repeat;
+    background-size: auto 50%;
+    border-radius: 0;
+}
+
+.report_nav_ls li a:hover {
+    background-color: #f3f3f3;
+    color: #333
+}
+
+.report_data_t {
+    border-bottom: solid 1px #eee;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    padding: 13px 10px;
+}
+
+.split-hr {
+    border-bottom: solid 1px #eee;
+    margin-bottom: 10px;
+}
+
+.text-guide {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-guide a{
+    color: #4367b4;
+}
+
+.my_pre_t {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    padding: 13px 10px;
+}
+
+.small-text-guide {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 10px;
+    color: #8c8c8c;
+    padding: 0 20px;
+    line-height: 1.5;
+}
+
+.right-border {
+    border-right: 1px solid #c8c8c8;
+}

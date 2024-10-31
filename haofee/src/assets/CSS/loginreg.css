@@ -1,0 +1,272 @@
+﻿@charset "utf-8";
+body {
+    background: #F5F8FA
+}
+
+.reg_part {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.reg_i {
+    border-bottom: solid 1px #eee;
+}
+
+.textbox {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 15px 2%;
+    font-size: 17px;
+    color: #333;
+    height: 25px;
+    line-height: 25px;
+}
+
+.reg_act {
+    padding-top: 40px;
+    height: 60px;
+}
+
+button.regbtn, a.regbtn {
+    background: #FC5A62;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    width: 90%;
+    /*height: 25px;*/
+    display: block;
+    box-shadow: 0px 7px 7px 1px #fee4e6;
+    border-radius: 51px;
+    line-height: 25px;
+    padding: 9px 0;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+button.regbtn:hover, a.regbtn:hover {
+    background: #ff3e47
+}
+
+.tologin {
+    text-align: center;
+    font-weight: 700;
+    height: 100px;
+}
+
+.tologin a {
+    color: #999;
+}
+
+.tologin a:hover {
+    color: #FC5A62;
+}
+
+.regyzmsp {
+    position: relative;
+    z-index: 1;
+}
+
+a.sendmsgbtn {
+    position: absolute;
+    top: 18px;
+    color: #F83F46;
+    right: 12px;
+}
+
+a.sendmsgbtn:hover {
+    color: #f90
+}
+
+.login_part {
+    background: #fff;
+    padding: 30px;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.login_banner {
+}
+
+.login_t {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    width: 60%;
+    padding-top: 10px;
+}
+
+.login_bnr {
+    width: 40%;
+    text-align: center;
+}
+
+.login_yzm_mode {
+    padding-top: 30px;
+}
+
+.login_i {
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+.loginyzmsp {
+    position: relative;
+    z-index: 1;
+}
+
+.lgtextbox {
+    outline: none;
+    border: solid 1px #f5f5f5;
+    border-radius: 20px;
+    background: #F6F6F6;
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    color: #444;
+    margin: 0 auto;
+    padding: 8px 5%;
+    font-size: 15px;
+}
+
+#login_phone {
+    font-size: 18px
+}
+
+a.login_sendmsgbtn {
+    position: absolute;
+    top: 14px;
+    right: 17px;
+    color: #F73E45;
+}
+
+a.login_sendmsgbtn:hover {
+    color: #F90;
+}
+
+.login_yzm_note {
+    text-align: center;
+    color: #b3b3b3;
+    padding-top: 5px;
+}
+
+.login_yzmmode_act, .login_udmode_act {
+    padding-top: 80px;
+    height: 60px;
+}
+
+button.login_yzmmode_btn, button.login_udmode_btn, a.login_yzmmode_btn, a.login_udmode_btn {
+    background: #FC5A62;
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    width: 90%;
+    /*height: 25px;*/
+    display: block;
+    box-shadow: 0px 7px 7px 1px #fee4e6;
+    border-radius: 51px;
+    line-height: 25px;
+    padding: 9px 0;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+button.login_yzmmode_btn:hover, button.login_udmode_btn:hover, a.login_yzmmode_btn:hover, a.login_udmode_btn:hover {
+    background: #ff3e47
+}
+
+.to_other_login {
+    text-align: center;
+    height: 100px;
+}
+
+.to_other_login span {
+    color: #999;
+    padding: 0 10px;
+}
+
+.to_other_login a {
+    color: #999
+}
+
+.to_other_login a:hover {
+    color: #FC5A62
+}
+
+.to_other_login_box {
+    text-align: center;
+    margin-top: 45%;
+}
+
+.to_other_login_box a {
+    color: #FDA2A4;
+    margin-top: 10%;
+}
+
+.other-login-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 16px;
+    width: 80%;
+    border: solid 1px #FDA2A4;
+    background: #fff;
+    color: #FDA2A4;
+}
+
+.other-login-btn:hover{
+    border: solid 1px #FD6067;
+    background: #fff;
+    color: #FD6067;
+}
+
+.login_ud_mode {
+    padding-top: 30px;
+}
+
+.spanheight {
+    height: 95px
+}
+
+.accept_user_agreement {
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: left;
+    color: #999;
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 15px 2%;
+    height: 25px;
+    line-height: 25px;
+}
+
+.accept_user_agreement a {
+    color: #2F8FE0;
+}
+
+.accept_form {
+    float: left;
+}
+
+.accept_text {
+    left: 15%;
+}
+
+.service-box {
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.service-content {
+    line-height: 20px;
+    margin-bottom: 10px;
+}

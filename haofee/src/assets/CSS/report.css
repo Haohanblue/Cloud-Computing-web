@@ -1,0 +1,122 @@
+@charset "utf-8";
+.report_title {
+    border-top: solid 0.5px #eee;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    padding: 13px 10px;
+    margin-top: 20px;
+}
+
+.report_title span a {
+    color: #4367b4;
+}
+
+.report_title_first {
+    border-top: solid 0.5px transparent;
+    margin-top: 0;
+}
+
+.report_box {
+
+}
+
+.report-more {
+    font-size: 14px;
+    color: #4367b4;
+    text-align: right;
+}
+
+.news-line {
+    display: inline-flex;
+    color: #4367b4;
+    font-size: 20px;
+    padding: 5px 0;
+    margin: 0 5px;
+}
+
+.news-abstract {
+    width: 75%;
+}
+
+
+.report-sub-nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.report-sub-nav ul {
+    width: 75%;
+    background: #fff;
+    line-height: 20px;
+    border-radius: 50px;
+    border: solid 1px #777;
+}
+
+.report-sub-nav li {
+    width: 33.33%;
+    text-align: center;
+    float: left;
+}
+
+.report-sub-nav a {
+    color: #777;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+.report-sub-nav li a:hover, .report-sub-li-active {
+    background-color: #777;
+    color: white;
+}
+
+.right-li {
+    background-size: auto 50%;
+    border-radius: 0 50px 50px 0;
+}
+
+.left-li {
+    background-size: auto 50%;
+    border-radius: 50px 0 0 50px;
+}
+/*修改*/
+.news-time {
+    color: #8c8c8c;
+    text-align: right;
+    font-size: 0.8rem;
+    line-height: 35px;
+    margin-bottom: -20px;
+}
+
+.review-line {
+    color: #333;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+    line-height: 35px;
+    border-top: solid 2px rgba(20,81,154,0.1);
+    font-weight: bold;
+}
+@media screen and (min-width: 960px){
+    .review-line {
+    height:50px ;
+    }
+}@media screen and (max-width: 960px){
+    .review-line {
+        height:90px ;
+    }
+
+}
+.review-line:hover{
+    color: rgb(215,55,27);
+}
+.review-line span{
+    cursor:pointer
+}
+.report_title span  {
+    color: #4367b4;
+    font-size: 1.3rem;
+}

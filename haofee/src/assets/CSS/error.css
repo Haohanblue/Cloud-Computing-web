@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.error {
+    text-align: center;
+}
+
+.error img {
+    margin-top: 50%;
+    width: 50%;
+}
+
+.error p {
+    color: #3875d7;
+    font-weight: 500;
+    margin: 10px 0;
+}

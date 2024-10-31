@@ -1,0 +1,102 @@
+.tab-wrapper {
+    margin: 20px auto;
+    width: 95%;
+    /*max-width:500px;*/
+}
+
+.tab-menu li {
+    position: relative;
+    background-color: #fff;
+    color: #bcbcbc;
+    display: inline-block;
+    padding: 20px 1%;
+    opacity: 0.8;
+    cursor: pointer;
+    z-index: 0;
+    font-size: 14px;
+}
+
+.tab-menu li:hover {
+    color: #464646;
+}
+
+.tab-menu li.active {
+    color: #464646;
+    opacity: 1;
+}
+
+.tab-menu li.active:hover {
+    color: #464646;
+}
+
+.tab-content > div {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    /*padding: 5%;*/
+    /*min-height:200px;*/
+}
+
+.line {
+    position: absolute;
+    width: 0;
+    height: 7px;
+    background-color: #4367b4;
+    top: 0;
+    left: 0;
+}
+
+.ml-overall-intro {
+    text-align: left;
+    padding: 5px 5px;
+    margin-bottom: 10px;
+    line-height: 18px;
+    color: #666;
+}
+
+.ml-block {
+    padding: 10px 0px;
+}
+
+.ml-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #4367b4;
+}
+
+.ml-content {
+    line-height: 18px;
+}
+
+.ml-content a {
+    color: #ff3300;
+}
+
+.ml-model-table {
+    text-align: center;
+    width: 100%;
+}
+
+.ml-model-table td, .ml-model-table th {
+    /*border: #8c8c8c 1px solid;*/
+    padding: 5px 0;
+    /*width: 25%;*/
+}
+
+.data-source {
+
+}
+
+.ml-intro-img img {
+    display: block;
+    width: 70%;
+    margin: 5px auto;
+    text-align: center;
+}
+
+.ml-flow-img img {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    text-align: center;
+}

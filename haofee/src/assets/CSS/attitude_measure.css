@@ -1,0 +1,45 @@
+@charset "utf-8";
+.attitude-box {
+    line-height: 25px;
+}
+
+.attitude-field {
+    margin-bottom: 5px;
+}
+
+.attitude-label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #4367b4;
+}
+
+.attitude-radio {
+    margin-top: 5px;
+}
+
+.attitude-radio label {
+    margin-right: 5px;
+}
+
+#attitude-measure-submit input.attitude-submit{
+    color: #666;
+    text-align: center;
+    font-size: 15px;
+    width: 100px;
+    background: white;
+    display: block;
+    box-shadow: 0px 7px 7px 1px #f9f9f9;
+    border: solid 1px #eee;
+    border-radius: 51px;
+    padding: 5px 0;
+}
+
+#attitude-measure-submit input.attitude-submit:hover {
+    border: solid 1px #F9474F;
+    color: #F9474F
+}
+
+.attitude-measures {
+    margin: 20px auto;
+    width: 95%;
+}

@@ -1,0 +1,304 @@
+﻿@charset "utf-8";
+*, html {
+    padding: 0;
+    margin: 0
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, th, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-appearance: none
+}
+
+body {
+    font-family: "microsoft yahei", "Helvetica Neue", Helvetica, STHeiti, sans-serif;
+    font-size: 14px;
+    color: #444;
+    word-break: break-all;
+    /*min-width: 350px;*/
+    /*max-width: 750px*/
+}
+
+img {
+    border: 0
+}
+
+a {
+    color: #555;
+    text-decoration: none
+}
+
+a:hover {
+    color: #f60;
+    text-decoration: none
+}
+
+ol, ul {
+    /*list-style: none*/
+}
+
+th, td {
+    border: 0 none;
+    outline: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+a {
+    text-decoration: none
+}
+
+button {
+    border: 0;
+    outline: 0 none
+}
+
+.clear:after {
+    clear: both
+}
+
+.clear:before, .clear:after {
+    display: table;
+    content: "";
+    line-height: 0
+}
+
+.clear {
+    margin: 0 auto;
+    *zoom: 1
+}
+
+.posabs {
+    position: absolute
+}
+
+.posrel {
+    position: relative
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.hide {
+    display: none
+}
+
+/*@media screen and (min-width: 750px) {*/
+/*    body {*/
+/*        width: 750px !important;*/
+/*        margin-right: auto;*/
+/*        margin-left: auto*/
+/*    }*/
+/*}*/
+
+input[type="submit"], input[type="reset"], input[type="button"], input[type="text"], input[type="password"], button {
+    -webkit-appearance: none
+}
+
+.b, .bold {
+    font-weight: 700
+}
+
+em, i {
+    font-style: normal
+}
+
+.center {
+    text-align: center
+}
+
+ul, li {
+    vertical-align: text-bottom;
+    font-style: normal
+}
+
+.pointer {
+    cursor: pointer
+}
+
+.none {
+    display: none
+}
+
+.bt_navbox {
+    max-width: 750px;
+    margin: auto;
+    display: flex
+}
+
+.bt_navbar {
+    height: 55px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999999;
+    font-size: 14px;
+    background: #fff;
+    padding: 0;
+    left: 0;
+    margin-left: 0;
+}
+
+.bt_navi {
+    width: 20%;
+    height: 44px;
+    text-align: center;
+    float: left;
+    padding-top: 6px
+}
+
+.bt_navi .bt_nav_home {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: url(../images/home.png) center center no-repeat;
+    margin: 0 auto;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.bt_nav_curr .bt_nav_home {
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: 0 auto;
+    background: url(../images/home_on.png) center 2px no-repeat;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.bt_nav_curr span.bt_nav_t {
+    color: #e0241b
+}
+
+.bt_nav_t {
+    color: #666;
+    display: block;
+    height: 17px;
+    line-height: 17px;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.bt_navi .bt_nav_hd {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: url(../images/space.png) center 2px no-repeat;
+    margin: 0 auto;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.bt_nav_curr .bt_nav_hd {
+    background: url(../images/space_on.png) center center no-repeat;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.ibtnavfb {
+    padding-top: 0;
+    position: relative
+}
+
+.bt_nav_fabu {
+    display: block;
+    height: 25px;
+    width: 25px;
+    /*background: url(../images/fabu.png) center 2px no-repeat;*/
+    background: url(../images/startact.png) center 2px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -webkit-background-size: auto 90%;
+    margin: 0 auto;
+    padding-top: 0;
+    -o-background-size: auto 80%
+}
+
+
+.bt_nav_curr .bt_nav_fabu {
+    background: url(../images/startact_curr.png) center 2px no-repeat;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.ibtnavfb .bt_nav_fabu {
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    left: 0
+}
+
+.ibtnavfb .bt_nav_t {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    left: 0
+}
+
+.bt_navi .bt_nav_space {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background: url(../images/navlearn.png) center center no-repeat;
+    margin: 0 auto;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.bt_nav_curr .bt_nav_space {
+    background: url(../images/navlearn_on.png) center center no-repeat;
+    background-size: auto 90%;
+    -moz-background-size: auto 90%;
+    -webkit-background-size: auto 90%;
+    -o-background-size: auto 90%
+}
+
+.bt_navi .bt_nav_u {
+    height: 25px;
+    display: block;
+    width: 25px;
+    margin: 0 auto;
+    background: url(../images/user.png) center 3px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -webkit-background-size: auto 80%;
+    -o-background-size: auto 80%
+}
+
+.bt_nav_curr .bt_nav_u {
+    background: url(../images/user_on.png) center 3px no-repeat;
+    background-size: auto 80%;
+    -moz-background-size: auto 80%;
+    -webkit-background-size: auto 80%;
+    -o-background-size: auto 80%
+}
+
+.ht10 {
+    height: 10px
+}

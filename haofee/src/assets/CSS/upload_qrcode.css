@@ -1,0 +1,110 @@
+@charset "utf-8";
+.verify_bg {
+    filter: alpha(opacity=50);
+    -moz-opacity: .5;
+    -khtml-opacity: .5;
+    opacity: .5;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.verify {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    z-index: 9991;
+}
+
+.verify_box {
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 7px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.verify_t {
+    font-size: 18px;
+    text-align: center;
+    color: #222;
+    border-bottom: solid 1px #eee;
+    padding-bottom: 20px;
+}
+
+.verify_act {
+    border-top: solid 1px #eee;
+    padding: 20px 12% 10px;
+    height: 50px;
+}
+
+a.verify_yes_btn, a.verify_back_btn {
+    background: #FD5E65;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    width: 45.9%;
+    height: 30px;
+    display: block;
+    box-shadow: 0px 7px 7px 1px #fee4e6;
+    border-radius: 51px;
+    line-height: 30px;
+    padding: 6px 0;
+}
+
+a.verify_back_btn {
+    box-shadow: none;
+    background: #eee;
+    color: #555
+}
+
+a.verify_yes_btn:hover {
+    background: #ff0000
+}
+
+a.verify_back_btn:hover {
+    background: #f90;
+    color: #fff
+}
+
+.qrcode_file input {
+    width: 70%;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.pay_qrcode_box {
+    text-align: center;
+}
+
+.pay_qrcode {
+    margin-top: 30px;
+    width: 50%;
+}
+
+.upload_btn {
+    background: #FD5E65;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0px 7px 7px 1px #fee4e6;
+    border-radius: 51px;
+    border-color: transparent;
+    padding: 3px 20px;
+}
+
+.delete_btn {
+    background: #eee;
+    color: #555;
+    text-align: center;
+    /*display: block;*/
+    border-radius: 51px;
+    border-color: transparent;
+    padding: 5px 20px;
+}

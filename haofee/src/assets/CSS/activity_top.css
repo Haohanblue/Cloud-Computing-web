@@ -1,0 +1,207 @@
+﻿@charset "utf-8";
+body {
+    background: #F5F8FA
+}
+
+.ph_part {
+    background: #fff;
+    padding: 20px 13px 100px;
+    border-radius: 7px;
+    margin: 10px;
+    border: solid 1px #f5f5f5;
+}
+
+.ph_mine {
+    font-size: 17px;
+    border: solid 1px #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 1px #f5f5f5;
+    padding: 15px 0 10px 0;
+    text-align: center;
+}
+
+.ph_my_t {
+    color: #FB575E;
+    font-size: 17px;
+    width: 20%;
+    font-weight: 700;
+}
+
+.ph_my_img {
+    width: 15%;
+    overflow: hidden;
+}
+
+.ph_my_img img {
+    max-width: 55px;
+}
+
+.ph_my_nick {
+    font-size: 15px;
+    line-height: 43px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 26%;
+    padding: 0 2%;
+}
+
+.ph_my_top {
+    padding-top: 13px;
+    color: #FB575E;
+    font-size: 15px;
+    width: 20%;
+}
+
+.ph_my_top_not_participant {
+    padding-top: 13px;
+    color: #FB575E;
+    font-size: 15px;
+    /*width: 20%;*/
+}
+
+.ph_my_top_not_participant a {
+    color: #FB575E;
+}
+
+.ph_my_money {
+    font-size: 15px;
+    padding-top: 13px;
+    color: #FB575E;
+    width: 15%;
+}
+
+.ph_data_info {
+    padding-top: 25px;
+}
+
+.ph_data_opt {
+}
+
+.ph_data_opt li {
+    color: #999;
+    float: left;
+    text-align: center;
+}
+
+.ph_data_opt li.ph_namet {
+    width: 14%;
+}
+
+.ph_data_opt li.ph_nameun {
+    width: 26%;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.ph_namelv {
+    width: 23%
+}
+
+.ph_namecs {
+    width: 22%
+}
+
+.ph_rows {
+    text-align: center
+}
+
+.ph_rows ul {
+    padding-top: 20px
+}
+
+.ph_rows li {
+    float: left;
+}
+
+.ph_sort {
+    font-weight: 700;
+    color: #999;
+    width: 13%;
+    padding-top: 9px;
+    line-height: 20px;
+    padding-right: 1%;
+}
+
+.sort {
+    background: #FB575E;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.sort1, .sort2, .sort3 {
+    background: url(../images/gold.png) 0 0 no-repeat;
+    display: inline-block;
+    background-size: cover;
+    width: 80%;
+	padding-top: 80%;
+}
+
+.sort2 {
+    /*background: #FFB94A;*/
+    background: url(../images/silver.png) 0 0 no-repeat;
+    display: inline-block;
+    background-size: cover;
+    width: 80%;
+	padding-top: 80%;
+}
+
+.sort3 {
+    /*background: #C6C6C6;*/
+    background: url(../images/bronze.png) 0 0 no-repeat;
+    display: inline-block;
+    background-size: cover;
+    width: 78%;
+	padding-top: 78%;
+}
+
+.ph_img {
+    width: 12%;
+}
+
+.ph_img img {
+    max-width: 45px;
+}
+
+.ph_nick {
+    text-align: left;
+    width: 25%;
+    padding: 16px 2% 0 2%;
+}
+
+.ph_vm {
+    padding-top: 16px;
+    width: 23%;
+    font-size: 16px;
+}
+
+.ph_cash {
+    width: 22%;
+    padding-top: 16px;
+    font-size: 16px;
+}
+
+.spanheight {
+    height: 95px
+}
+
+.share_top {
+    color: #FB575E;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.share_des {
+    color: #C6C6C6;
+    font-size: 10px;
+    margin-top: 20px;
+    font-weight: lighter;
+    line-height: 18px;
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* ----------------- slider -----------------*/
+#slider{
+    overflow:hidden;
+    clear:both;
+    margin:0px 0px 40px 0px;
+    width:980px;
+    height:268px;
+}
+/* slider_imgs 其实就是包含6张图的容器, 长度自然就是 (6 * 980)
+ * 并且让第一张图隐藏起来 marginLeft = -980px
+*/
+#slider_imgs{
+    float:left;
+    margin:20px 0 0 -980px;
+    width:5880px;
+    height:268px;
+}
+
+#slider_imgs li{
+    width:980px;
+    height:268px;
+    float:left;
+}
+
+#slider_imgs img{
+    margin:0px 20px 0px 20px;
+    width:940px;
+    height:268px;
+}
+
+#slider_index{
+    clear:both;
+    position:absolute;
+    text-align:center;
+    margin: 230px 0 0 400px;
+}
+
+#slider_index li{
+    width: 20px;
+    height: 20px;
+    border-radius:20px;
+    background-color:white;
+    margin-right: 20px;
+}
+/* 指示器选中时高亮 */
+#slider_index #on{
+    background-color: #E94653;
+}
