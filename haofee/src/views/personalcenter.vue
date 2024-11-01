@@ -1,50 +1,20 @@
 <template>
-    <div class="loginContainer">
-      <div class="loginInner">
-        <div class="login_header">
-          <div class="login_logo">浩韩咖啡</div>
-          <div class="login_header_title">
-            <a href="javascript:;" :class="{on:loginWay}" @click="loginWay=true">短信登录</a>
-          </div>
-        </div>
-        <!-- 内容部分 -->
-        <div class="login_content">
-           <form @submit.prevent="login">
-               <!-- 短信登录 -->
-             <div :class="{on: loginWay}">
-                   <section class="login_message">
-                     <input type="tel" maxlength="11" placeholder="手机号" v-model="phone" />
-                    <button :disabled="!rightPhone" class="get_verification" :class="{right_phone:rightPhone}" @click.prevent="getCode">{{computeTime>0 ? `(${computeTime}s)已发送` : '获取验证码'}}</button>
-                   </section>
-                   <section class="login_verification">
-                       <input type="tel" maxlength="8" placeholder="验证码" v-model="code">
-                   </section>
-                   <section class="login_hint">
-                       温馨提示：未注册浩韩咖啡帐号的手机号，登录时将自动注册，且代表已同意
-                        <a href="javascript:;">《用户服务协议》</a>
-                   </section>
-              </div>
-              <button class="login_submit">登录</button>
-           </form>
-        </div>
-      </div>
-    </div>
-  </template>
+  <div>
+    <el-button @click="showLoginDialog=true"> 登录 </el-button>
+      <LoginCard v-model:visible="showLoginDialog"></LoginCard>
+    <bottomNav />
+  </div>
+</template>
   <script>
   import {getVerifyCode} from '/src/api/login.ts';
+  import LoginCard from '/src/views/LoginCard.vue';
+  import bottomNav from "/src/components/bottomNav.vue";
   export default {
     name: "personalcenter",
+    components: {LoginCard,bottomNav},
     data() {
       return {
-        loginWay:true,//true代表短信登陆, false代表密码
-        phone:'',//手机号,
-        computeTime: 0,
-        code:'',//验证码
-        timer:null,
-        showPwd:false,
-        captcha:'',
-        pwd:'',
-        name
+        showLoginDialog: false
       };
     },
     computed:{

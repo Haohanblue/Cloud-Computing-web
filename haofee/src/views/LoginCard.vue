@@ -1,4 +1,6 @@
 <template>
+    <el-dialog v-model="dialogFormVisible" title="登录验证" style="width: 90%;">
+      <el-col :span="22" :offset="1" >
     <div class="loginContainer">
       <div class="loginInner">
         <div class="login_header">
@@ -29,11 +31,21 @@
         </div>
       </div>
     </div>
-  </template>
+    </el-col> 
+    </el-dialog>
+</template>
   <script>
   import {getVerifyCode} from '/src/api/login.ts';
+  import { verifyCode } from '/src/api/login.ts';
   export default {
-    name: "Login",
+    name: "LoginCard",
+    props: {
+        visible: {
+            type: Boolean,
+            default: false
+        }
+    },
+
     data() {
       return {
         loginWay:true,//true代表短信登陆, false代表密码
@@ -43,9 +55,18 @@
         timer:null,
         showPwd:false,
         captcha:'',
-        pwd:'',
-        name
+        dialogFormVisible: this.visible,
       };
+    },
+    watch: {
+        // 监听父组件传入的 visible 值变化
+        visible(newVal) {
+            this.dialogFormVisible = newVal;
+        },
+        // 监听内部 dialogFormVisible 值变化，通知父组件
+        dialogFormVisible(newVal) {
+            this.$emit('update:visible', newVal);
+        }
     },
     computed:{
       rightPhone(){
@@ -64,6 +85,8 @@
               }
           }, 1000);
         }
+        
+        //调用接口
         getVerifyCode(this.phone).then(res => {
           console.log(res);
         });
@@ -74,21 +97,33 @@
            console.log(this.rightPhone);
           if(!this.rightPhone){
           alert('手机号不正确');
-           }else if(!/^\d{6}$/.test(this.code)){
-           alert('验证码必须是6位')
-          }
-        }else{
-          //密码验证
-          if(!/^[\u4E00-\u9FA5]{2,4}$/.test(this.name)){
-             alert('用户名必须是2-4个汉字');
-          }else if(!/^\d{6}$/.test(this.pwd)){
-            alert('密码必须是6位');
-          }else if(!this.captcha){
-            alert('图片验证码不正确');
+           }else if(!/^\d{4}$/.test(this.code)){
+           alert('验证码必须是4位')
           }
         }
-       
-        console.log(111);
+        verifyCode(this.phone, this.code).then(res => {
+          // 如果登录成功，设置cookie
+              /*{
+        "message": "登录成功",
+        "cookie": {
+            "user_token": "HeQXRK_lhxWHzoJa:59bccb0dfbc5d4f667428c46f99401f8a3165e93ae9b811ff39ba2ec47e65958""
+        }
+        }         */
+        if (res.cookie && res.cookie.user_token) {
+            // 删除之前的，设置新的
+            const cookiestr = `user_token=${res.cookie.user_token}; max-age=86400;`
+            console.log(cookiestr);
+            document.cookie = cookiestr; // 86400 = 1 day
+            console.log(document.cookie);
+            // If using js-cookie: Cookies.set('user_token', res.cookie.user_token, { expires: 1 });
+            alert('登录成功');
+            // 跳转到首
+            this.$router.push({path: '/'});
+          console.log(res);
+        }
+      }).catch(err => {
+          console.log(err);
+        });
       }
     }
   };
