@@ -1,13 +1,7 @@
 <template>
     <div>
     <van-sticky >
-        <form action="/" style="height: 5vh;">
-            <van-search
-                v-model="value"
-                show-action
-                placeholder="请输入搜索关键词"
-            />
-        </form>
+
         <van-notice-bar left-icon="volume-o" :scrollable="false" style="height: 3vh;">
             <van-swipe
                 vertical
@@ -25,7 +19,7 @@
     </van-sticky>
     <LoginCard v-model:visible="showLoginDialog"></LoginCard>
     <div>
-        <van-tabs v-model:active="active" scrollspy sticky offset-top="8vh">
+        <van-tabs v-model:active="active" scrollspy sticky offset-top="3vh">
             <van-tab v-for="(content,index) in categorizedProducts" :title="content.CategoryName">
                 <el-card >
                     <template #header>

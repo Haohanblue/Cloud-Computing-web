@@ -2,7 +2,7 @@
   <div>
     <el-button @click="showLoginDialog=true"> 登录 </el-button>
       <LoginCard v-model:visible="showLoginDialog"></LoginCard>
-      <el-button @click="Mylogout"> 注销 </el-button>
+    <el-button @click="Mylogout"> 注销 </el-button>
     <bottomNav />
 
   </div>
@@ -41,9 +41,6 @@
             });
        
       }
-    
-    
-    
     
     }
   };

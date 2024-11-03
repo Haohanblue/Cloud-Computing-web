@@ -4,7 +4,7 @@
         <el-carousel :interval="4000" class="carousel" height="200px" :autoplay="true">
 
           <el-carousel-item>
-            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+            <img ref="bannerHeight" src="/src/assets/images/nav/coffe1.png" style="width:100%" @load="imgLoad" />
             <el-row class="head-part">
               <el-col :offset="1" :span="22">
                 <el-row>
@@ -16,7 +16,7 @@
             </el-row>
           </el-carousel-item>
           <el-carousel-item>
-            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+                   <img ref="bannerHeight" src="/src/assets/images/nav/coffe2.png" style="width:100%" @load="imgLoad" />
             <el-row class="head-part">
               <el-col :offset="1" :span="22">
                 <el-row>
@@ -27,7 +27,7 @@
               </el-col>
             </el-row>
           </el-carousel-item>         <el-carousel-item>
-            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+                   <img ref="bannerHeight" src="/src/assets/images/nav/coffe3.png" style="width:100%" @load="imgLoad" />
             <el-row class="head-part">
               <el-col :offset="1" :span="22">
                 <el-row>
@@ -38,7 +38,7 @@
               </el-col>
             </el-row>
           </el-carousel-item>         <el-carousel-item>
-            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+                   <img ref="bannerHeight" src="/src/assets/images/nav/coffe4.png" style="width:100%" @load="imgLoad" />
             <el-row class="head-part">
               <el-col :offset="1" :span="22">
                 <el-row>
@@ -51,13 +51,22 @@
           </el-carousel-item>
 
         </el-carousel>
-    
+        <div v-if="!isLogin" style="display: flex;flex-direction: row;justify-content: right;">
+          <el-text tag="b" style="margin-right: 2rem;">您好啊，使用本程序请登录后使用</el-text>
+          <el-button @click="showLoginDialog=true" :v-show="!isLogin" type="success" round> 去登录/注册 </el-button>
+        </div>
+        <div v-if="isLogin"  style="display: flex;flex-direction: row;justify-content: right;">
+          <el-text tag="b" style="margin-right: 2rem;">想要退出登录</el-text>
+          <el-button @click="Mylogout" :v-show="isLogin" type="warning" round> 注销 </el-button>
+        </div>
+        <LoginCard v-model:visible="showLoginDialog"></LoginCard>
+        
         <el-row>
           <el-col :span="22" :offset="1" class="part-title">
             <span>购物中心</span>
           </el-col>
           <el-col :span="22" :offset="1" class="home-box competition-center">
-            <el-row class="center">
+            <el-row class="center" @click="$router.push({path: '/menu'})">
               <el-col :span="22" :offset="1">
                 <h3>购物中心</h3>
               </el-col>
@@ -65,9 +74,7 @@
                 <!-- <span style="font-size:14px;color: #555555;">简介</span> -->
               </el-col>
               <el-col style="margin-top: 10px">
-                <el-button class="to-competition" size="small" @click="$router.push({path: '/menu'})">
-                  <span>查看菜单</span>
-                </el-button>
+                
               </el-col>
             </el-row>
           </el-col>
@@ -77,8 +84,8 @@
           <el-col :span="22" :offset="1" class="part-title">
             <span>订单中心</span>
           </el-col>
-          <el-col :span="22" :offset="1" class="home-box competition-center">
-            <el-row class="center">
+          <el-col :span="22" :offset="1" class="home-box order-center">
+            <el-row class="center" @click="$router.push({path: '/order'})">
               <el-col :span="22" :offset="1">
                 <h3>订单中心</h3>
               </el-col>
@@ -86,9 +93,6 @@
                 <!-- <span style="font-size:14px;color: #555555;">简介</span> -->
               </el-col>
               <el-col style="margin-top: 10px">
-                <el-button class="to-competition" size="small" @click="$router.push({path: '/order'})">
-                  <span>查看订单</span>
-                </el-button>
               </el-col>
             </el-row>
           </el-col>
@@ -103,17 +107,28 @@
   
   <script>
 import bottomNav from "/src/components/bottomNav.vue";
-import { getMe } from "/src/api/login.ts";
+import LoginCard from '/src/views/LoginCard.vue';
+import { getMe ,logout} from "/src/api/login.ts";
+import { showNotify, showConfirmDialog } from "vant";
   export default {
     name: "homepage",
-    components: {bottomNav},
+    components: {LoginCard,bottomNav},
     data() {
       return {
         bannerHeight: 200,
+        showLoginDialog: false,
+        isLogin:null
       }
     },
     mounted() {
       getMe().then(res => {
+        if (res.status === 401){
+          console.log("未登录");
+          this.isLogin = false;
+        }else if (res.UserID){
+          console.log("已登录");
+          this.isLogin = true;
+        }
         console.log(res);
       });
     },
@@ -121,7 +136,25 @@ import { getMe } from "/src/api/login.ts";
   
     },
     methods: {
-      
+      Mylogout(){
+        showConfirmDialog({
+            title: '注销登录',
+            theme: 'round-button',
+            message:
+              '确认退出当前账号？',
+          })
+            .then(() => {
+              logout().then(res => {
+                showNotify({ type: 'success', message: '注销成功' });
+                window.location.reload();
+              console.log(res);
+              });
+            })
+            .catch(() => {
+              // on cancel
+            });
+       
+      }
  
     },
   
@@ -192,7 +225,18 @@ import { getMe } from "/src/api/login.ts";
   
   /*赛事中心*/
   .competition-center{
-    background-image: linear-gradient(to right, #9fe8db, #8fdfe7, #8ed4ee, #99c6ee, #abb8e5);
+    background-image: url('/src/assets/images/nav/shop.png');
+    background-size: contain; /* 使图片按比例缩放至容器内 */
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+   /*赛事中心*/
+   .order-center{
+    background-image: url('/src/assets/images/nav/order.png');
+    background-size: contain; /* 使图片按比例缩放至容器内 */
     display: inline-block;
     border-radius: 10px;
     padding-top: 50px;

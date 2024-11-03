@@ -6,6 +6,7 @@ import PayResult from '/src/views/payresult.vue'
 import Order from '/src/views/Order.vue'
 import Menu from '/src/views/Menu.vue'
 import OrderItem from '/src/views/OrderItem.vue'
+import Admin from '/src/views/Admin.vue'
 const routes = [
   {
     path: '/',
@@ -42,6 +43,11 @@ const routes = [
     name: 'OrderItem',
     component: OrderItem
   },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: Admin
+  }
 ]
 
 const router = createRouter({
