@@ -43,7 +43,7 @@ export function logout() {
   return axios.post(`${API_BASE_URL}/users/logout/`, {
     withCredentials: true
   }).then(res => {
-    return res.data;
+    return res;
   })
   .catch(err => {
     return err;

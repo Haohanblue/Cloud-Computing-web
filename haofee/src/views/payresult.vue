@@ -19,18 +19,22 @@ import {getPayResult} from '/src/api/pay.ts';
     methods: {
       async checkOrderStatus() {
         try {
-          const orderId = this.$route.query.orderId  // 假设订单ID通过查询参数传递
+          const orderId = this.$route.query.out_trade_no  // 假设订单ID通过查询参数传递
           console.log(orderId);
           // 调用订单查询接口
           const data = await getPayResult(orderId);
           console.log(data);
           if (data.status === '1') {
             this.message = '支付成功';
+            // 跳转到订单详情页
+            this.$router.push({ name: 'orderitem', params: { orderId } });
           } else {
             this.message = '支付失败';
+            this.$router.push({ name: 'homepage' });
           }
         } catch (error) {
           this.message = '支付失败';
+          this.$router.push({ name: 'homepage' });
         }
       }
     }

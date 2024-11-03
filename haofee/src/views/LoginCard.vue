@@ -37,6 +37,8 @@
   <script>
   import {getVerifyCode} from '/src/api/login.ts';
   import { verifyCode } from '/src/api/login.ts';
+  import { showNotify ,showConfirmDialog  } from 'vant';
+
   export default {
     name: "LoginCard",
     props: {
@@ -76,6 +78,10 @@
     },
     methods:{
       getCode(){
+        if(this.computeTime > 0){
+          showNotify({ type: 'danger', message: '请不要频繁获取短信' });
+          return
+        }
         if(!this.computeTime){
           this.computeTime = 30;
           this.timer = setInterval(() => {
@@ -85,10 +91,11 @@
               }
           }, 1000);
         }
-        
         //调用接口
         getVerifyCode(this.phone).then(res => {
+          showNotify({ type: 'success', message: '发送成功，请耐心等待短信' });
           console.log(res);
+          
         });
       },
       login(){
@@ -96,9 +103,9 @@
         if(this.loginWay){
            console.log(this.rightPhone);
           if(!this.rightPhone){
-          alert('手机号不正确');
+            showNotify({ type: 'danger', message: '手机号码格式不正确' });
            }else if(!/^\d{4}$/.test(this.code)){
-           alert('验证码必须是4位')
+            showNotify({ type: 'danger', message: '验证码格式必须为4位数字' });
           }
         }
         verifyCode(this.phone, this.code).then(res => {
@@ -116,9 +123,10 @@
             document.cookie = cookiestr; // 86400 = 1 day
             console.log(document.cookie);
             // If using js-cookie: Cookies.set('user_token', res.cookie.user_token, { expires: 1 });
-            alert('登录成功');
+            showNotify({ type: 'success', message: '登录成功' });
             // 跳转到首
-            this.$router.push({path: '/'});
+            //刷新页面
+            window.location.reload();
           console.log(res);
         }
       }).catch(err => {
@@ -139,7 +147,7 @@
   .loginInner {
     width: 80%;
     margin: 0 auto;
-    padding-top: 60px;
+    padding-top: 20px;
   }
   .loginInner .login_header .login_logo {
     color: #02a774;

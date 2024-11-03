@@ -2,13 +2,16 @@
   <div>
     <el-button @click="showLoginDialog=true"> 登录 </el-button>
       <LoginCard v-model:visible="showLoginDialog"></LoginCard>
+      <el-button @click="Mylogout"> 注销 </el-button>
     <bottomNav />
+
   </div>
 </template>
   <script>
-  import {getVerifyCode} from '/src/api/login.ts';
+  import {getVerifyCode,logout} from '/src/api/login.ts';
   import LoginCard from '/src/views/LoginCard.vue';
   import bottomNav from "/src/components/bottomNav.vue";
+  import { showNotify ,showConfirmDialog  } from 'vant';
   export default {
     name: "personalcenter",
     components: {LoginCard,bottomNav},
@@ -18,48 +21,30 @@
       };
     },
     computed:{
-      rightPhone(){
-        //利用正则对手机号匹配
-        return /^1[3456789]\d{9}$/.test(this.phone);
-      }
     },
     methods:{
-      getCode(){
-        if(!this.computeTime){
-          this.computeTime = 30;
-          this.timer = setInterval(() => {
-              this.computeTime --;
-              if( this.computeTime <= 0){
-                clearInterval(this.timer)
-              }
-          }, 1000);
-        }
-        getVerifyCode(this.phone).then(res => {
-          console.log(res);
-        });
-      },
-      login(){
-        //短信验证
-        if(this.loginWay){
-           console.log(this.rightPhone);
-          if(!this.rightPhone){
-          alert('手机号不正确');
-           }else if(!/^\d{6}$/.test(this.code)){
-           alert('验证码必须是6位')
-          }
-        }else{
-          //密码验证
-          if(!/^[\u4E00-\u9FA5]{2,4}$/.test(this.name)){
-             alert('用户名必须是2-4个汉字');
-          }else if(!/^\d{6}$/.test(this.pwd)){
-            alert('密码必须是6位');
-          }else if(!this.captcha){
-            alert('图片验证码不正确');
-          }
-        }
+      Mylogout(){
+        showConfirmDialog({
+            title: '注销登录',
+            theme: 'round-button',
+            message:
+              '确认退出当前账号？',
+          })
+            .then(() => {
+              logout().then(res => {
+                showNotify({ type: 'success', message: '注销成功' });
+              console.log(res);
+              });
+            })
+            .catch(() => {
+              // on cancel
+            });
        
-        console.log(111);
       }
+    
+    
+    
+    
     }
   };
   </script>

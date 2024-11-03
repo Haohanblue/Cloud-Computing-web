@@ -1,46 +1,19 @@
 <template>
-    <div class="bottom-nav">
-      <el-row style="justify-content: center">
-        <el-col :span="3">
-          <router-link to="/" :class="{'bottom-act': currentPage === 'home'}">
-            <el-row style="justify-content: center;font-size: 25px">
-              <i class="el-icon-s-home"></i>
-            </el-row>
-            <el-row style="justify-content: center;">
-              <span>首页</span>
-            </el-row>
-          </router-link>
-        </el-col>
-        <el-col :span="3" :offset="8">
-          <router-link to="/personal_center" :class="{'bottom-act': currentPage === 'personal'}">
-            <el-row style="justify-content: center;font-size: 25px">
-              <i class="el-icon-user-solid"></i>
-            </el-row>
-            <el-row style="justify-content: center;">
-              <span>我的</span>
-            </el-row>
-          </router-link>
-        </el-col>
-      </el-row>
-    </div>
+    <van-tabbar route>
+      <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+      <van-tabbar-item replace to="/menu" icon="cart-o">菜单</van-tabbar-item>
+      <van-tabbar-item replace to="/order" icon="records-o">订单</van-tabbar-item>
+      <!-- <van-tabbar-item replace to="/personal_center" icon="contact-o">我的</van-tabbar-item> -->
+    </van-tabbar>
   </template>
-  
   <script>
-//   import {
-//     getCSRFToken
-//   } from '@/api/token'
   
   export default {
     name: "bottomNav",
     props: ['currentPage'],
     mounted() {
-    //   this.getCSRFTokenMethod()
     },
     methods: {
-    //   // 获取csrftoken 确保受保护接口不会响应403
-    //   getCSRFTokenMethod() {
-    //     getCSRFToken();
-    //   }
     }
   
   }

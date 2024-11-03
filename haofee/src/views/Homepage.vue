@@ -1,64 +1,101 @@
 <template>
     
     <div class="container">
-        <el-carousel :interval="4000" class="carousel" height="200px">
+        <el-carousel :interval="4000" class="carousel" height="200px" :autoplay="true">
 
           <el-carousel-item>
             <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
             <el-row class="head-part">
               <el-col :offset="1" :span="22">
                 <el-row>
-                  <a href="https://www.imzhuge.com/" title="嗨皮诸葛">
-                    <img src="/src/assets/images/logo.png" alt="嗨皮诸葛" style="width:60% "/>
-                  </a>
-                  <router-link to="/help_center" class="center-vertically" style="margin-left: auto;">
-                    <img src="/src/assets/images/helpcenter2.svg" alt="帮助中心" height="14" style="padding: 1px;">
-                    <span style="color: #FFFFFF;">帮助中心</span>
-                  </router-link>
-                </el-row>
-                <el-row>
-                  <el-col :span="14" :offset="1" class="introduction">
-                    <span>
-                      小诸葛带你<br>秒懂平台操作与奖金分配
-                    </span>
-                  </el-col>
-                  <el-col :span="4">
-                    <img src="/src/assets/images/web_logo.png" height="80" alt="logo">
-                  </el-col>
-                </el-row>
-                <el-row style="margin-top: 5px">
-                  <el-col :span="11" :offset="3" class="banner-btn center" @click="toProcess()">
-                    一图了解活动流程 >>
-                  </el-col>
-                  <el-col :span="7" :offset="1" class="banner-btn center" @click="toGuide">
-                    新人引导 >>
+                  <el-col :span="24" class="head-part-info">
+                    <span>浩韩咖啡</span>
                   </el-col>
                 </el-row>
               </el-col>
             </el-row>
           </el-carousel-item>
+          <el-carousel-item>
+            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+            <el-row class="head-part">
+              <el-col :offset="1" :span="22">
+                <el-row>
+                  <el-col :span="24" class="head-part-info">
+                    <span>浩韩咖啡</span>
+                  </el-col>
+                </el-row>
+              </el-col>
+            </el-row>
+          </el-carousel-item>         <el-carousel-item>
+            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+            <el-row class="head-part">
+              <el-col :offset="1" :span="22">
+                <el-row>
+                  <el-col :span="24" class="head-part-info">
+                    <span>浩韩咖啡</span>
+                  </el-col>
+                </el-row>
+              </el-col>
+            </el-row>
+          </el-carousel-item>         <el-carousel-item>
+            <!--        <img ref="bannerHeight" :src="item.src" style="width:100%" @load="imgLoad" />-->
+            <el-row class="head-part">
+              <el-col :offset="1" :span="22">
+                <el-row>
+                  <el-col :span="24" class="head-part-info">
+                    <span>浩韩咖啡</span>
+                  </el-col>
+                </el-row>
+              </el-col>
+            </el-row>
+          </el-carousel-item>
+
         </el-carousel>
     
         <el-row>
           <el-col :span="22" :offset="1" class="part-title">
-            <span>赛事中心</span>
+            <span>购物中心</span>
           </el-col>
           <el-col :span="22" :offset="1" class="home-box competition-center">
             <el-row class="center">
               <el-col :span="22" :offset="1">
-                <h3>赛事中心</h3>
+                <h3>购物中心</h3>
               </el-col>
               <el-col style="margin-top: 10px;" :span="22" :offset="1" >
                 <!-- <span style="font-size:14px;color: #555555;">简介</span> -->
               </el-col>
               <el-col style="margin-top: 10px">
-                <el-button class="to-competition" size="small" @click="$router.push({path: '/competition_center'})">
-                  <span>查看更多</span>
+                <el-button class="to-competition" size="small" @click="$router.push({path: '/menu'})">
+                  <span>查看菜单</span>
                 </el-button>
               </el-col>
             </el-row>
           </el-col>
         </el-row>
+        <el-row>
+
+          <el-col :span="22" :offset="1" class="part-title">
+            <span>订单中心</span>
+          </el-col>
+          <el-col :span="22" :offset="1" class="home-box competition-center">
+            <el-row class="center">
+              <el-col :span="22" :offset="1">
+                <h3>订单中心</h3>
+              </el-col>
+              <el-col style="margin-top: 10px;" :span="22" :offset="1" >
+                <!-- <span style="font-size:14px;color: #555555;">简介</span> -->
+              </el-col>
+              <el-col style="margin-top: 10px">
+                <el-button class="to-competition" size="small" @click="$router.push({path: '/order'})">
+                  <span>查看订单</span>
+                </el-button>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+
+
+
       </div>
     <bottom-nav  :current-page="'home'"></bottom-nav>
 
@@ -66,6 +103,7 @@
   
   <script>
 import bottomNav from "/src/components/bottomNav.vue";
+import { getMe } from "/src/api/login.ts";
   export default {
     name: "homepage",
     components: {bottomNav},
@@ -75,57 +113,18 @@ import bottomNav from "/src/components/bottomNav.vue";
       }
     },
     mounted() {
-    //   this.getCSRFTokenMethod()
+      getMe().then(res => {
+        console.log(res);
+      });
     },
     created: function () {
-      window.showUnderline = this.showUnderline;
-      window.res_deceleration = this.res_deceleration;
-      window.res_close = this.res_close;
-      this.$nextTick(() => {
-        this.toLocal()
-      })
+  
     },
     methods: {
-      toGuide() {
-        window.location.href = 'https://m.imzhuge.com/new/'
-      },
-      res_deceleration() {
-        document.getElementById("detail-board-front").style.display = "block"
-      },
-      res_close() {
-        document.getElementById("detail-board-front").style.display = "none"
-      },
-      // 获取csrftoken 确保受保护接口不会响应403
-    //   getCSRFTokenMethod() {
-    //     getCSRFToken();
-    //   },
-      toWeeklyForecast() {
-        this.$router.push({
-          path: '/weekly_forecast',
-        })
-      },
-      toActivitySquare() {
-        window.location.href = config.serverUrl + '/activity/'
-      },
-      toProcess() {
-        this.$router.push({
-          path: '/process',
-        })
-      },
-      toBeiAn() {
-        window.open("https://beian.miit.gov.cn", "_blank");
-      },
+      
+ 
     },
-    // 设置背景
-    beforeCreate() {
-      this.$nextTick(() => {
-        document.body.setAttribute('style', 'background:#f5f8fa')
-      })
-    },
-    //实例销毁之前钩子，移除body标签的属性style
-    beforeUnmount() {
-      document.body.removeAttribute('style')
-    },
+  
   }
   </script>
   

@@ -3,6 +3,9 @@ import homepage from '/src/views/Homepage.vue'
 import LoginCard from '/src/views/LoginCard.vue'
 import personalcenter from '/src/views/personalcenter.vue'
 import PayResult from '/src/views/payresult.vue'
+import Order from '/src/views/Order.vue'
+import Menu from '/src/views/Menu.vue'
+import OrderItem from '/src/views/OrderItem.vue'
 const routes = [
   {
     path: '/',
@@ -23,7 +26,22 @@ const routes = [
     path: '/payresult',
     name: 'PayResult',
     component: PayResult
-  }
+  },
+  {
+    path: '/order',
+    name: 'Order',
+    component: Order
+  },
+  {
+    path:'/menu',
+    name:'Menu',
+    component:Menu
+  },
+  {
+    path: '/orderitem/:orderId',
+    name: 'OrderItem',
+    component: OrderItem
+  },
 ]
 
 const router = createRouter({

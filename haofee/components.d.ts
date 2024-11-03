@@ -9,8 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     BottomNav: typeof import('./src/components/bottomNav.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
+    ElBadge: typeof import('element-plus/es')['ElBadge']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElButtun: typeof import('element-plus/es')['ElButtun']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElCol: typeof import('element-plus/es')['ElCol']
@@ -31,5 +33,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Sell: typeof import('./src/components/sell.vue')['default']
     Stock: typeof import('./src/components/stock.vue')['default']
+    TopNav: typeof import('./src/components/topNav.vue')['default']
+    VerifyLogin: typeof import('./src/components/verifyLogin.vue')['default']
   }
 }
