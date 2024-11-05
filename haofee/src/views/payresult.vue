@@ -27,7 +27,9 @@ import {getPayResult} from '/src/api/pay.ts';
           if (data.status === '1') {
             this.message = '支付成功';
             // 跳转到订单详情页
+            setTimeout(function(){},2000);
             this.$router.push({ name: 'orderitem', params: { orderId } });
+
           } else {
             this.message = '支付失败';
             this.$router.push({ name: 'homepage' });

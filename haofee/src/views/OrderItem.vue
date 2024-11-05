@@ -124,15 +124,15 @@
   {
     text: '微信支付',
     value: 'wechat',
-    icon: '/src/assets/icons/wechat.png',
+    icon: 'https://img.haohan.space/img/202411031857764.png',
   },
   {
     text: '支付宝支付',
     value: 'alipay',
-    icon: '/src/assets/icons/alipay.png',
+    icon: 'https://img.haohan.space/img/202411031857709.png',
   },
 ];
-const paymentMethod = ref(paymentMethods[0]); // 默认选择第一个支付方式
+const paymentMethod = ref(paymentMethods[1]); // 默认选择第一个支付方式
 
   const showPicker = ref(false);
   
